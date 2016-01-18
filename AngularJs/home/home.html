@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<body ng-app="myApp" ng-controller="userCtrl">
+
+<div class="w3-container">
+
+<h3>Welcome to Document Library</h3>
+
+<table class="w3-table w3-bordered w3-striped">
+  <tr>
+    <th colspan="3">Login info</th>
+  </tr>
+ </table>
+<br>
+<button class="w3-btn w3-green w3-ripple" ng-click="editUser('new')">&#9998; Login with credentials</button>
+
+
+
+<form ng-hide="hideform">
+  <h3 ng-show="edit">Login with credentials</h3>
+    <label>User Name:</label>
+    <input class="w3-input w3-border" type="text" ng-model="fName" placeholder="First Name">
+  <br>
+    <label>Password:</label>
+    <input  class="w3-input w3-border" type="password" ng-model="passw1" placeholder="Password">
+  <br>
+  <button class="w3-btn w3-green w3-ripple" ng-click="login('login')" ng-disabled="error || incomplete">&#10004; Login</button>
+</form>
+
+
+
+</div>
+
+<script src= "login.js"></script>
+
+</body>
+</html>
